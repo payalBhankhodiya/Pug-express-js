@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const data = require("./data.json");
 
+const PORT = 3000;
+
 app.get("/api/userlist",(req,res) => {
     res.json(data);
 });
@@ -13,16 +15,6 @@ app.get("/html/userlist",(req,res) => {
     res.render("index",{users:data});
 });
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
     console.log("server running at port 3000");
 });
-
-
-
-
-
-
-
-
-
-
