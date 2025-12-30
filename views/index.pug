@@ -1,0 +1,12 @@
+doctype html 
+html 
+    head 
+        title users 
+    body 
+        h1 userlist 
+
+        ul 
+            each user in users
+                li
+                    | ID: #{user.id} | Name: #{user.name} | Age: #{user.age}
+    
